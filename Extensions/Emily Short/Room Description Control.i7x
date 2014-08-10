@@ -1,6 +1,7 @@
-Version 10 of Room Description Control by Emily Short begins here.
+Version 12 of Room Description Control by Emily Short begins here.
 
 "A framework by which the author can considerably change the listing of objects in a room description. Includes facilities for concealing objects arbitrarily and changing the order in which objects are listed."
+ 
 
 Section 1 - Priority and Concealment Rules
 
@@ -28,7 +29,7 @@ A description-priority rule (this is the mentioning tedious things rule):
 	now every thing enclosed by the player is not marked for listing;
 	now every scenery thing is not marked for listing;
 	
-A description-priority rule (this is the determining concealment rule):
+A description-priority rule (this is the determining concealment rule): 
 	follow the description-concealing rules.
 	
 The description-concealing rules are a rulebook. 
@@ -37,27 +38,20 @@ A description-concealing rule (this is the concealing parts rule):
 	now everything that is part of something is not marked for listing.
 
 A description-concealing rule (this is the ordinary-concealment rule):
-	repeat with special-target running through marked for listing people
-	begin;
-		repeat with second special-target running through things carried by special-target
-		begin;
-			if special-target conceals second special-target, now second special-target is not marked for listing;
-		end repeat;
-	end repeat.
+	repeat with special-target running through marked for listing people:
+		repeat with second special-target running through things carried by special-target:
+			if special-target conceals second special-target:
+				now second special-target is not marked for listing.
 
 A description-concealing rule (this is the don't mention things out of play rule):
-	repeat with special-target running through marked for listing things
-	begin;
-		if the holder of the special-target is nothing, now the special-target is not marked for listing;
-	end repeat;
+	repeat with special-target running through marked for listing things:
+		if the holder of the special-target is nothing, now the special-target is not marked for listing.
 
 A description-priority rule (this is the loading table rule):
 	empty out the table of seen things;
-	repeat with item running through mentionable things
-	begin;
+	repeat with item running through mentionable things:
 		choose a blank row in the Table of Seen things;
-		now output entry is item;  
-	end repeat;
+		now output entry is item.
 
 lowest-rank is a number that varies.
 
@@ -66,11 +60,11 @@ A description-priority rule (this is the description-ranking rule):
 	repeat through the Table of Seen Things
 	begin;  
 		now the description-rank of the output entry is 0;
-		consider the ranking rules for the output entry;
+		follow the ranking rules for the output entry;
 		now the current rank entry is the description-rank of the output entry;
 		if description-rank of the output entry is less than lowest-rank, now lowest-rank is description-rank of the output entry;
 	end repeat;
-	sort the Table of Seen Things in reverse current rank order;
+	sort the Table of Seen Things in reverse current rank order; 
 
 A description-priority rule (this is the reporting descriptions rule):
 	repeat through the Table of Seen things
@@ -115,7 +109,7 @@ After printing the plural name of something (called target):
 To decide whether (X - a thing) nominally matches (Y - a thing):
 	(- ({X}.list_together == {Y}.list_together) -)
 
-To call (RL - a rule) on everything in scope:
+To call (RL - an objects based rule) on everything in scope:
 (-
    processing_rule = {RL};
    LoopOverScope(Process_single_item);
@@ -141,10 +135,8 @@ This is the new describe contents rule:
 	if the person asked is the player, follow the description-priority rules.
 
 A description-concealing rule while entering a container (called special-target):
-	repeat with item running through marked for listing things
-	begin;
-		if item is not enclosed by special-target, now the item is not marked for listing;
-	end repeat.
+	repeat with item running through marked for listing things:
+		if item is not enclosed by special-target, now the item is not marked for listing.
 
 Section 3 - Debugging - Not for release
 
@@ -152,30 +144,24 @@ Understand "paragraphs" or "paragraphs off" as paragraph-debugging. paragraph-de
 
 Paragraph-debug-state is a number that varies. Paragraph-debug-state is 0.
 
-Carry out paragraph-debugging:
+Carry out paragraph-debugging (this is the default carry out paragraph debugging rule):
 	if paragraph-debug-state is 1, now paragraph-debug-state is 0;
 	otherwise now paragraph-debug-state is 1.
 
-Report paragraph-debugging:
-	say "Paragraph debugging is now [if paragraph-debug-state is 1]on[otherwise]off[end if]."
+Report paragraph-debugging (this is the default report paragraph debugging rule):
+	say "Paragraph debugging is now [if paragraph-debug-state is 1]on[otherwise]off[end if]." (A)
 
 The table-debugging rule is listed after the description-ranking rule in the description-priority rules.
 
 This is the table-debugging rule:
-	if paragraph-debug-state is 1
-	begin;
-		repeat through the Table of Seen things
-		begin;  
-			if the output entry is unmentioned
-			begin;
+	if paragraph-debug-state is 1:
+		repeat through the Table of Seen things:
+			if the output entry is unmentioned:
 				say "[output entry]: rank [current rank entry][line break]";
 				now output entry is unmentioned;
-			otherwise;
+			otherwise:
 				say "[output entry]: rank [current rank entry] (already mentioned)[line break]";
-			end if;
-		end repeat;
 		say "[line break]";
-	end if;
 
 Room Description Control ends here.
 
@@ -264,3 +250,5 @@ Version 7 adds the don't mention things out of play rule; this means that if the
 Version 8 adds a fix for bugs involving multiple identical objects, so that they will not each earn their own individual listings.
 
 Version 10 removes deprecated phrases.
+
+Version 12 does some cleanup and brings the extension in line with adaptive responses.
