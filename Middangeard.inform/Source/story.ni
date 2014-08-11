@@ -9,6 +9,10 @@ Include Basic Screen Effects by Emily Short.
 Include Single Paragraph Description by Emily Short.
 Include Version 2 of Located Sounds by Mikael Segercrantz.
 
+[Global rules]
+Use scoring.
+Use undo prevention.
+
 [Styles]
 
 [Media]
