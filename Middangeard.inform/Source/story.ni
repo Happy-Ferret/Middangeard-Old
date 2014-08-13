@@ -41,7 +41,11 @@ Score	Rank
 950	"Wizard"
 1000	"Master Adventurer"
 
+[Item definitions]
+An apple is in a Cave.
+
 [Item descriptions]
+The initial appearance of the apple is "A tasty red apple is lying on the floor."
 
 [Character descriptions]
 

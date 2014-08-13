@@ -1,27 +1,49 @@
 <?xml version="1.0"?>
-<Skein rootNode="node-0x95725f0" xmlns="http://www.logicalshift.org.uk/IF/Skein">
+<Skein rootNode="node-0x18f0b90" xmlns="http://www.logicalshift.org.uk/IF/Skein">
   <generator>Zoom</generator>
-  <activeNode nodeId="node-0x400770" />
-  <item nodeId="node-0x95725f0">
+  <activeNode nodeId="node-0x1567c0" />
+  <item nodeId="node-0x18f0b90">
     <command xml:space="preserve">- start -</command>
     <result xml:space="preserve">
 
 
 Middangeard
 An Interactive Fiction by Mark &quot;Happy-Ferret&quot; Bauermeister Include Location Images by Emily Short
-Release 1 / Serial number 140812 / Inform 7 build 6L02 (I6/v6.33 lib 6/12N) SD
+Release 1 / Serial number 140813 / Inform 7 build 6L02 (I6/v6.33 lib 6/12N) SD
 
 Cave
+A tasty red apple is lying on the floor.
 
 &gt;</result>
     <played>YES</played>
     <changed>YES</changed>
     <temporary score="3">NO</temporary>
     <children>
-      <child nodeId="node-0xe860cb0" />
+      <child nodeId="node-0x18f0ae0" />
+      <child nodeId="node-0x18f0a90" />
     </children>
   </item>
-  <item nodeId="node-0xe860cb0">
+  <item nodeId="node-0x18f0a90">
+    <command xml:space="preserve">take apple</command>
+    <result xml:space="preserve">Taken.
+
+[Your score has just gone up by ten points.]
+
+&gt;</result>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="3">YES</temporary>
+    <children>
+      <child nodeId="node-0x1567c0" />
+    </children>
+  </item>
+  <item nodeId="node-0x1567c0">
+    <command xml:space="preserve">look</command>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="2">YES</temporary>
+  </item>
+  <item nodeId="node-0x18f0ae0">
     <command xml:space="preserve">w</command>
     <result xml:space="preserve">
 Castle
@@ -31,10 +53,10 @@ Castle
     <changed>YES</changed>
     <temporary score="3">YES</temporary>
     <children>
-      <child nodeId="node-0x400770" />
+      <child nodeId="node-0x18f0b30" />
     </children>
   </item>
-  <item nodeId="node-0x400770">
+  <item nodeId="node-0x18f0b30">
     <command xml:space="preserve">e</command>
     <played>YES</played>
     <changed>YES</changed>
