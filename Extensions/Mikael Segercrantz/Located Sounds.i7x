@@ -18,7 +18,7 @@ This is the basic listening rule:
 
 The basic listening rule is listed in the carry out listening to rules.
 
-Procedural rule: ignore the block listening rule.
+
 
 Located Sounds ends here.
 
