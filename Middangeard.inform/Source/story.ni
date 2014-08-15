@@ -11,11 +11,16 @@ Include Version 2 of Located Sounds by Mikael Segercrantz.
 Use scoring.
 Use undo prevention.
 
+When play begins: 
+	now the time of day is 6:00 AM; 
+	now the right hand status line is "[time of day]".
+
 [Styles]
 
 [Media]
 
 [Sound table]
+Sound of Thunder is the file "Thunder.ogg".
 
 [Scoring table]
 Table of Point Values 
