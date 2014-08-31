@@ -65,4 +65,8 @@ Castle is west of Cave.
 
 [Room descriptions]
 
+[Characters]
+
+Troll is a man in the Cave. Troll carries a giant wooden club and an iron broadshield.
+
 [Credits]
