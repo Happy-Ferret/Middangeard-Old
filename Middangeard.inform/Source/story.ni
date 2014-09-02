@@ -67,6 +67,6 @@ Castle is west of Cave.
 
 [Characters]
 
-Troll is a man in the Cave. Troll carries a giant wooden club and an iron broadshield.
+Troll is a man in the Cave. Troll carries a giant wooden club and an iron broadshield. The initial appearance of Troll is "A large, rather ugly troll is standing in front of you. It is wielding a massive wooden club in the one hand and an iron broadshield in the other." 
 
 [Credits]

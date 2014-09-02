@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
-<Skein rootNode="node-0x68cd40" xmlns="http://www.logicalshift.org.uk/IF/Skein">
+<Skein rootNode="node-0x237e80" xmlns="http://www.logicalshift.org.uk/IF/Skein">
   <generator>Zoom</generator>
-  <activeNode nodeId="node-0x68cd40" />
-  <item nodeId="node-0x68cd40">
+  <activeNode nodeId="node-0x237e80" />
+  <item nodeId="node-0x237e80">
     <command xml:space="preserve">- start -</command>
     <result xml:space="preserve">
 
@@ -19,10 +19,10 @@ A tasty red apple is lying on the floor.You also see here Troll, a giant wooden 
     <changed>YES</changed>
     <temporary score="2">NO</temporary>
     <children>
-      <child nodeId="node-0x68ca50" />
+      <child nodeId="node-0x237a90" />
     </children>
   </item>
-  <item nodeId="node-0x68ca50">
+  <item nodeId="node-0x237a90">
     <command xml:space="preserve">Look at troll</command>
     <played>YES</played>
     <changed>YES</changed>
